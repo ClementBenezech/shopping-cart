@@ -16,17 +16,32 @@
     top: 8vh;
     right: 1vw;
     border-radius: 0.2vw;
-    overflow: hidden;
     box-shadow: 0.2vw 0.2vw 0.5vw rgb(179, 179, 179);
     font-family: 'Iceland';
     @include mobile-only {
         position: fixed;
         bottom: 0;
-        right: 5vw;
-        left: 5vw;
+        right: 0vw;
+        left: 0vw;
         top:unset;
-        width: 90vw;
+        width: 100vw;
         height: auto;
+        background: transparent;
+    }
+
+    &__checkout {
+        width: 100%;
+        text-align:center;
+        font-size: 3vw;
+        color: rgb(0, 183, 255);
+        background-image: url('/images/stripes-light.png');
+        text-decoration:none;
+        @include mobile-only {
+            font-size: 3vh;
+        }
+        &:hover {
+            color: orange;
+        }
     }
     
     &__total-container {
@@ -65,6 +80,12 @@
     &__products-container {
         width: 100%;
         height: 80%;
+        @include mobile-only {
+            display:flex;
+            flex-direction:row-reverse;
+            justify-content: flex-start;
+            flex-wrap:wrap;
+        }
     }
 
     &__product {
@@ -73,14 +94,20 @@
         flex-wrap: wrap;
         align-items:center;
         width: 100%;
-        padding: 2vh 0;
+        padding: 0 0;
         margin: 0 0;
         background-color:rgba(245, 232, 94, 0.616);
-        
         font-size: 1vw;
         @include mobile-only {
             background-color:white;
             padding: 0 0;
+            width: 33%;
+            height: max-content;
+            flex-wrap:wrap;
+            flex-direction: column;
+            align-items:center;
+            flex-grow: 1;
+            min-width: 33.3%;
         }
         @include mobile-only {
             font-size: 2vh;
@@ -97,29 +124,63 @@
             padding-left: 2vw;
             box-sizing: border-box;
             @include mobile-only {
-                width: 35%;
+                width: 100%;
+                text-align:center;
+                font-size: 3vh;
+                min-height: 8vh;
+            }
+        }
+        &__image {
+            width: 10%;
+            height: 3vw;
+            object-fit:contain;
+            @include mobile-only {
+                height: 5vh;
+                width: 15vw;
             }
         }
         &__quantity {
             width: 3vh;
+            font-size: 1.3vw;
             text-align:center;
+            @include mobile-only {
+                font-size: 2vh;
+
+            }
         }
         &__unit-price {
             width: 10%;
             @include mobile-only {
                 font-size: 2vh;
+                display: none;
             }
             
         }
         &__global-price {
             width: 10%;
             padding-right: 10%;
+            @include mobile-only {
+                padding-right: 0;
+                text-align: center;
+                width: auto;
+                background-color: rgba(255, 166, 0, 0.664);
+                border-radius: 0.2vw;
+                margin-top: 1vh;
+                font-size: 3vh;
+            }
             &::after {
                 content: "€";
+                
             }
         }
         &__remove {
-            width: 10%;
+            width: 5%;
+            @include mobile-only {
+                padding-right: 0;
+                text-align: center;
+                margin-top: 1vh;
+                width: auto;
+            }
             
         }
         &__increment {
@@ -157,6 +218,11 @@
                 height: 3vh;
             }
         }
+        &__quantity-container {
+            display:flex;
+            flex-direction: row;
+            align-content:center;
+        }
     }
     &__product-label {
         display: flex;
@@ -171,12 +237,10 @@
         font-size: 1vw;
         @include mobile-only {
             font-size: 3vh;
+            display: none;
         }
         &__quantity {
             width: 20%;
         }
-    }
-    & button {
-        
     }
 }

@@ -20,7 +20,6 @@
         border-radius: 0;
     }
     & p {
-        width: 100%;
         padding: 0;
         margin: 0;
         text-align:center;
@@ -46,9 +45,9 @@
         background-color: black;
     }
     &__buy {
-        width: 100%;
+        width: 50%;
         height: auto;
-        font-size: 4vw;
+        font-size: 3vw;
         color: rgb(1, 189, 246);
         text-shadow: 2px 2px black;
         margin-top: 2vh;
@@ -60,32 +59,46 @@
             object-fit:contain;
         }
     }
+    &__buy-container {
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:center;
+        width: 100%;
+        border: 0.2vh solid rgb(0, 10, 143)
+    }
     &__name {
         width:auto;
         background-color: rgba(248, 153, 0, 0.849);
         font-size: 2vw;
+        width:100%;
     }
     &__phrase {
         clip-path: polygon(100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
         background-color:rgb(1, 189, 246);
         font-size: 1vw;
+        width:100%;
     }
     &__price {
         color:rgba(248, 153, 0, 0.849);
         font-size: 2vw;
+        width: 40%;
         &::after {
             content: "€";
         }
     }
     &__cart-count {
         width: 100vw;
+        height: 2.5vw;
         text-align:center;
         color: rgb(0, 124, 161);
         font-size: 1.5vw;
-        padding-bottom: 3vh;
+        padding: 0.1vw 0;
+        margin: 0;
         
         @include mobile-only {
             font-size: 3vh;
+            height:unset;
             border-bottom: 1vh dashed orange;
         }
     }

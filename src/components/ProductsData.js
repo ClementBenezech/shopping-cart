@@ -34,6 +34,13 @@ export const products = [
         'description' : "So you know where you're going",
         'price' : 200,
         'image' : "react-router"
+    },
+    {   'id' : 6,
+        'name' : 'Clement Benezech',
+        'description' : "clement.benezech@gmail.com",
+        'price' : "2500",
+        'image' : "clem"
     }
+    
     
 ]

@@ -8,9 +8,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:center;
+    background-image: url("/images/stripes-light.png");
     @include mobile-only {
         width: 100vw;
-        padding-bottom: 50vh
+        padding-bottom: 50vh;
     }
     & h1 {
         width: 100%;
