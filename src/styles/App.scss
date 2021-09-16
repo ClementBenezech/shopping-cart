@@ -1,0 +1,14 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins.scss";
+
+.shop-container {
+ /*display: flex;*/
+ height: max-content;
+ flex-direction: row;
+ justify-content: center;
+ background-image: url("/images/stripes-light.png");
+ font-family: 'Iceland';
+@include mobile-only {
+    height: 90vh;
+}
+}
