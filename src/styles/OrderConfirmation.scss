@@ -1,0 +1,153 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins.scss";
+
+.order-confirmation {
+    background-image: url("/images/what-the-hex.png");
+    min-height: 90vh;
+    margin:  5vh 0;
+    width: 40vw;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+    border-radius: 1vw;
+    overflow:hidden;
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.589);
+    font-family: "Iceland";
+    @include mobile-only {
+        width:100%;
+        height: 90vh;
+        font-size: 2vh;
+        border-radius: 0;
+        margin:  0 0;
+    }
+
+    &__checkout {
+        width: 100%;
+        text-align:center;
+        font-size: 3vw;
+        color: rgb(0, 183, 255);
+        background-image: url('/images/what-the-hex-dark.png');
+        text-decoration:none;
+        @include mobile-only {
+            font-size: 3vh;
+        }
+        &:hover {
+            color: orange;
+        }
+    }
+
+    & i {
+        color: red;
+        font-size: 5vw;
+        margin-top: 3vh;
+        @include mobile-only {
+
+            font-size: 10vh;
+        }
+    }
+
+    &__top-container {
+        background-image: url("/images/what-the-hex-dark.png");
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        color:white;
+        width: 100%;
+    }
+    
+    &__message {
+        width: 90%;
+        text-align:center;
+        background-color:transparent;
+        font-size: 1.1vw;
+        margin: 2vw;
+        @include mobile-only {
+            font-size: 2vh;
+            margin: 2vh;
+        }
+    }
+
+    &__text {
+        width: 70%;
+        text-align:justify;
+        background-color:transparent;
+        font-size: 1.5vw;
+        margin: 1vw;
+        @include mobile-only {
+            font-size: 2.5vh;
+            margin: 1vh;
+        }
+    }
+
+    &__products-container {
+        width: 100vw;
+        max-height: 80%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        @include mobile-only {
+            display:flex;
+            flex-direction:row-reverse;
+            justify-content: flex-start;
+            flex-wrap:wrap;
+            padding-top: 2vh;
+        }
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items:center;
+        width: 40%;
+        padding: 0 0;
+        margin: 0 0;
+        background-color:rgba(245, 232, 94, 0.616);
+        font-size: 1vw;
+        @include mobile-only {
+            background-color:white;
+            padding: 0 0;
+            width: 33%;
+            height: max-content;
+            flex-wrap:wrap;
+            flex-direction: column;
+            align-items:center;
+            flex-grow: 1;
+            min-width: 33.3%;
+            background-image: url("/images/what-the-hex.png")
+        }
+        @include mobile-only {
+            font-size: 2vh;
+        }
+        &:nth-child(odd) {
+            background-color:rgba(211, 237, 255, 0.616);
+            @include mobile-only {
+
+                
+            }
+        }
+        &__name {
+            width: 80%;
+            padding-left: 2vw;
+            box-sizing: border-box;
+            text-align:center;
+            font-size: 2vw;
+            @include mobile-only {
+                width: 100%;
+                font-size: 3vh;
+                min-height: 8vh;
+            }
+        }
+        &__image {
+            width: 10%;
+            height: 3vw;
+            object-fit:contain;
+            @include mobile-only {
+                height: 5vh;
+                width: 15vw;
+            }
+        }
+    }
+}

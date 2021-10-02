@@ -26,11 +26,11 @@ const Product = (props) => {
                 props.productData.quantity = 1
                 dispatch({ type: 'product/addToCart', payload: props.productData})
                 }}>
+                <div className = "product__name">{props.productData.name}</div>
                 <Zoom>
                     <img className = "product__image" src = {"./"+props.productData.image+".png"}/>
                 </Zoom>
-                <p className = "product__name">{props.productData.name}</p>
-                <p className = "product__phrase">{props.productData.description}</p>
+                <div className = "product__phrase">{props.productData.description}</div>
                 
                 <div className = 'product__buy-container'>
                 <p className = "product__price">{props.productData.price}</p>

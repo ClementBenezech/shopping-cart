@@ -65,6 +65,13 @@ export default function rootReducer(state = initialState, action) {
         }
       }
 
+      case 'cart/empty' : {
+        return {
+          ...state,
+          cartProducts : []
+        }
+      }
+
     default:      
     // If this reducer doesn't recognize the action type, or doesn't      
     // care about this specific action, return the existing state unchanged 

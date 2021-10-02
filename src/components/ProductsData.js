@@ -1,6 +1,6 @@
 export const products = [
     {   'id' : 0,
-        'name' : 'HTML 5 markup',
+        'name' : 'HTML 5',
         'description' : 'Clean, accessible && W3C compliant',
         'price' : 300,
         'image' : "html5"
@@ -12,14 +12,14 @@ export const products = [
         'image' : "sass"
     },
     {   'id' : 2,
-        'name' : 'Javascript Vanilla',
+        'name' : 'Vanilla JS',
         'description' : 'Mmmmhhh, Vanilla... No. seriously.',
         'price' : 500,
         'image' : "jsvanilla"
     },
     {   'id' : 3,
         'name' : 'ReactJS',
-        'description' : "Functionnal style. It's all about the hooks!",
+        'description' : "Functional style. It's all about the hooks!",
         'price' : 600,
         'image' : "react"
     },
@@ -36,11 +36,23 @@ export const products = [
         'image' : "react-router"
     },
     {   'id' : 6,
+        'name' : 'Native French',
+        'description' : "It's like... you know. Super Fluent!",
+        'price' : "279",
+        'image' : "france"
+    },
+    {   'id' : 7,
+        'name' : 'Fluent english',
+        'description' : "For real!",
+        'price' : "359",
+        'image' : "england"
+    },
+    {   'id' : 8,
         'name' : 'Clement Benezech',
         'description' : "clement.benezech@gmail.com",
         'price' : "2500",
         'image' : "clem"
-    }
+    },
     
     
 ]
