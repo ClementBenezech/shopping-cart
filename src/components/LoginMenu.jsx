@@ -7,14 +7,11 @@ import { useState } from "react";
 
 const LoginMenu = () => {
 
+    const dispatch = useDispatch()
     //getting the current UserName and status
     const storeUserName = state => state.user.fullName;
     const currentUserName = useSelector(storeUserName);
-
-    const dispatch = useDispatch()
-
-    /*Setting up hooks for fields
-    These will be used to maintain a state for the form and allow the send function to work its magic*/
+    /*Setting up hooks for form fields*/
     const [userName, setUserName] = useState("");
 
     //If user is not authentified, then display the login form (here it is just a simple field to enter a name)
@@ -36,18 +33,14 @@ const LoginMenu = () => {
                                 if (userName) {
                                     dispatch({type : "user/PutUserNameInState", payload: userName})
                                 }
-                                }
-                            }>
-                                <label>Please enter your name</label>
+                            }}>
+                                <label className = "login-menu__welcome-message">Please enter your name</label>
                                 <input id = "userName" onChange = {e => {
                                     setUserName(e.target.value)
-                                } }></input>
+                            }}></input>
                                 <button className = "login-menu__login"><i class="fas fa-sign-in-alt"></i></button>
                             </form>
-                        </div>
-                
+                        </div>               
     }
-    }
-
-  
+}
 export default LoginMenu

@@ -31,14 +31,16 @@
         display:flex;
         flex-direction:row;
         justify-content:space-around;
-        padding: 1vw;
+        align-items:center;
         @include mobile-only {
-            padding: 2vh;
             width: 95%;
         }
     }
     &__welcome-message {
         width:80%;
+        @include mobile-only {
+            font-size: 4vw;
+        }
 
     }
     &__logout {
@@ -65,8 +67,12 @@
         font-size: 1.4vw;
         overflow: visible;
         height: 1.4vw;
+        align-content: center;
+        display: flex;
+        align-items: center;
         @include mobile-only {
-            font-size: 2vh;
+            font-size: 6vw;
+            padding-left: 1vh;
         }
         &:hover {
             color: rgb(0, 119, 199);
