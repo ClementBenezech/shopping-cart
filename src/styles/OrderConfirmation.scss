@@ -23,28 +23,44 @@
         margin:  0 0;
     }
 
+    &__user-name {
+        color: orange;
+    }
+
     &__checkout {
         width: 100%;
         text-align:center;
         font-size: 3vw;
         color: rgb(0, 183, 255);
-        background-image: url('/images/what-the-hex-dark.png');
+        /*background-image: url('/images/what-the-hex-dark.png');*/
         text-decoration:none;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-evenly;
+        padding-bottom: 1vw;
+
+        & i {
+            color: rgb(0, 140, 255);
+            font-size: 3vw;
+            margin-top: 1vh;
+            @include mobile-only {
+                font-size: 5vh;
+            }
+        }
         @include mobile-only {
             font-size: 3vh;
         }
+    }
+    
+    &__contact-item-container {
+        font-size: 1vw;
+        text-decoration:none;
+        color:rgb(0, 140, 255);
+        @include mobile-only {
+            font-size: 2vh;
+        }
         &:hover {
             color: orange;
-        }
-    }
-
-    & i {
-        color: red;
-        font-size: 5vw;
-        margin-top: 3vh;
-        @include mobile-only {
-
-            font-size: 10vh;
         }
     }
 
@@ -55,14 +71,22 @@
         align-items:center;
         color:white;
         width: 100%;
+        & i {
+            color: rgb(0, 140, 255);
+            font-size: 3vw;
+            margin-top: 1vh;
+            @include mobile-only {
+                font-size: 5vh;
+            }
+        }
     }
     
     &__message {
         width: 90%;
         text-align:center;
         background-color:transparent;
-        font-size: 1.1vw;
-        margin: 2vw;
+        font-size: 1.6vw;
+        margin: 1vw;
         @include mobile-only {
             font-size: 2vh;
             margin: 2vh;
@@ -71,7 +95,7 @@
 
     &__text {
         width: 70%;
-        text-align:justify;
+        text-align:center;
         background-color:transparent;
         font-size: 1.5vw;
         margin: 1vw;

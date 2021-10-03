@@ -5,8 +5,13 @@ import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import store from "./components/Store.js"
+import { saveState } from './components/LocalStorage'
 import { HashRouter } from 'react-router-dom';
 
+//Saving the store state into localStorage (saveState is declared in LocalSorage.js)
+store.subscribe(() => {
+  saveState(store.getState())
+})
 
 ReactDOM.render(
   <React.StrictMode>

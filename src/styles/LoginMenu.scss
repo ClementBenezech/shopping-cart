@@ -1,0 +1,80 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins.scss";
+
+.login-menu {
+    background: url('/images/connectwork.png');
+    position: fixed;
+    top: 1vh;
+    right: 1vw;
+    width: 28vw;
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+    border-radius: 0.2vw;
+    padding: 0 1vw;
+    color: white;
+    font-weight: bold;
+    font-family: 'Iceland';
+    @include mobile-only {
+        top:0;
+        left:0;
+        width:100%;
+        font-size: 2.5vh;
+        padding: 1vh;
+        box-sizing: border-box;
+    }
+    &__login-form {
+        width: 100%;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        padding: 1vw;
+        @include mobile-only {
+            padding: 2vh;
+            width: 95%;
+        }
+    }
+    &__welcome-message {
+        width:80%;
+
+    }
+    &__logout {
+        width:20%;
+        color: white;
+        background-color:transparent;
+        border:none;
+        font-size: 2vw;
+        overflow: visible;
+        height: 1.4vw;
+        @include mobile-only {
+            font-size: 3vh;
+        }
+        &:hover {
+            color: red;
+        }
+    }
+
+    &__login {
+        width:auto;
+        color: white;
+        background-color:transparent;
+        border:none;
+        font-size: 1.4vw;
+        overflow: visible;
+        height: 1.4vw;
+        @include mobile-only {
+            font-size: 2vh;
+        }
+        &:hover {
+            color: rgb(0, 119, 199);
+        }
+    }
+    &__catchphrase {
+        width: 100%;
+        color: orange;
+
+    }
+}

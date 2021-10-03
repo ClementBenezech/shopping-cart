@@ -14,6 +14,9 @@ const ShoppingCart = () => {
     const cartItems = state => state.cartProducts;
     const currentCartItems = useSelector(cartItems);
 
+    const storeUserName = state => state.user.fullName;
+    const currentUserName = useSelector(storeUserName);
+
         let totalCartAmount = 0;
         currentCartItems.map(data => {
              totalCartAmount = totalCartAmount + (data.price * data.quantity) 
@@ -23,7 +26,11 @@ const ShoppingCart = () => {
 
         //Activating the orderLink button only if the cart is not empty
         if (totalCartAmount > 0) {
+            if (currentUserName != null) {
              orderLink = <Link className = 'shopping-cart__checkout' to='/order-confirmation'>order now!</Link>
+            } else {
+             orderLink = <div className = 'shopping-cart__checkout shopping-cart__checkout--inactive'>Enter your name to order!</div>
+            }
         }
 
         let reactElementsArray = [];

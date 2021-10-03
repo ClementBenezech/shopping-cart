@@ -1,8 +1,15 @@
-const initialState = {cartProducts: []}
+const initialState = {cartProducts: [], user : {fullName : null, status: 'guest'}}
 // Use the initialState as a default value
 export default function rootReducer(state = initialState, action) {
   // The reducer normally looks at the action type field to decide what happens  
-  switch (action.type) {  
+  switch (action.type) {
+    case "user/PutUserNameInState": {
+      return {
+        ...state,
+        user : {fullName : action.payload, status: 'authentified'}
+      }
+      
+    }
     case 'product/addToCart': {
       /*Handling the addProduct case: 
         If the product already exists in the state, then increment its quantity by specified quantity

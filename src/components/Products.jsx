@@ -11,7 +11,6 @@ const Products = () => {
         
         return (
                      <div className  = "product-list">
-                        <h1>{"In need of some skills?"}</h1>
                         {reactElementsArray}
                     </div>  
 
